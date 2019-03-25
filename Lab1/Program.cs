@@ -9,19 +9,21 @@ namespace Lab_1
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            var res = SquareSum(1, 2);
-            Console.WriteLine("Ответ: {0}", res); //Выведет 9.
+            Console.Write("Enter first number and press enter: "); //Введите первый номер:
+            double a = double.Parse(Console.ReadLine()); 
+            Console.Write("Enter second number and press enter: "); //Введите второй номер:
+            double b = double.Parse(Console.ReadLine());
+            var sum = a + b;
+            Console.Write("result="  + Math.Pow(sum, 2)); //Выводится результат.
             Console.ReadKey();
         }
-
-        static double SquareSum(double x, double y)
+        public static double sum(double a, double b)
+            
         {
-            double sum = x + y;
-            double result = Math.Pow(sum, 2);
-
-            return result;
+            return a + b;
         }
+
     }
 }
